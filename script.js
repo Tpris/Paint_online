@@ -14,12 +14,12 @@ document.getElementById('erase').onclick = function(){
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 }
 
-color.onclick = function(e){
-    ctx.strokeStyle = e.target.value;
+color.onchange = function(){
+    ctx.strokeStyle = color.value;
 }
 
-lineWidth.onchange = function(e){
-    ctx.lineWidth = e.target.value;
+lineWidth.onclick = function(e){
+    ctx.lineWidth = lineWidth.value;
 }
 
 canvas.onmousedown = function() { 
