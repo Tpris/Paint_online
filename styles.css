@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    color: white;
+    height: 100%;
+    display: flex;
+}
+
+
+#toolbar {
+    padding: 5px;
+    width: 100px;
+    background: linear-gradient(25deg,
+    red, orange, yellow , green, blue, purple);;
+}
+
+#toolbar input {
+    width: 100%;
+} 
