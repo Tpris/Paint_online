@@ -5,7 +5,7 @@ const color = document.getElementById('color');
 const saveButton = document.getElementById('save');
 let mouseDown = false;
 
-canvas.width = window.innerWidth;
+canvas.width = window.innerWidth - canvas.offsetLeft;
 canvas.height = window.innerHeight;
 ctx.lineWidth = lineWidth.value;
 ctx.strokeStyle = color.value;
