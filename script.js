@@ -3,7 +3,9 @@ const ctx = canvas.getContext('2d');
 const lineWidth = document.getElementById('lineWidth');
 const color = document.getElementById('color');
 const saveButton = document.getElementById('save');
+const eraserBrush = document.getElementById('eraser-brush');
 let mouseDown = false;
+let erase = false;
 
 canvas.width = window.innerWidth - canvas.offsetLeft;
 canvas.height = window.innerHeight;
@@ -13,6 +15,11 @@ ctx.lineCap = 'round';
 
 document.getElementById('erase').onclick = function(){
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+}
+
+eraserBrush.onclick = function(){
+    erase = !erase;
+    eraserBrush.style.backgroundColor = (erase)?"deeppink":"lightgray"
 }
 
 color.onchange = function(){
@@ -33,6 +40,7 @@ canvas.onmouseup = function() {
 
 canvas.onmousemove = function(e) {
     if(mouseDown){
+        ctx.globalCompositeOperation= (erase)?"destination-out":"source-over";
         ctx.stroke();
         ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
     }
