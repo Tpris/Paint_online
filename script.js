@@ -18,7 +18,7 @@ color.onchange = function(){
     ctx.strokeStyle = color.value;
 }
 
-lineWidth.onclick = function(e){
+lineWidth.onclick = function(){
     ctx.lineWidth = lineWidth.value;
 }
 
