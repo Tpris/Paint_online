@@ -2,6 +2,7 @@ const canvas = document.getElementById('drawing-board');
 const ctx = canvas.getContext('2d');
 const lineWidth = document.getElementById('lineWidth');
 const color = document.getElementById('color');
+const saveButton = document.getElementById('save');
 let mouseDown = false;
 
 canvas.width = window.innerWidth;
@@ -35,4 +36,12 @@ canvas.onmousemove = function(e) {
         ctx.stroke();
         ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
     }
+}
+
+saveButton.onclick = function() {
+  let imageName = prompt('Image name :', 'paint');
+  let a = document.createElement('a');
+  a.href = canvas.toDataURL();
+  a.download = imageName;
+  a.click();
 }
