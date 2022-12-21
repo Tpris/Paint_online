@@ -19,7 +19,8 @@ document.getElementById('erase').onclick = function(){
 
 eraserBrush.onclick = function(){
     erase = !erase;
-    eraserBrush.style.backgroundColor = (erase)?"deeppink":"lightgray"
+    eraserBrush.style.backgroundColor = (erase)?"lightgray":"transparent"
+    eraserBrush.style.color = (erase)?"blue":"white"
 }
 
 color.onchange = function(){
