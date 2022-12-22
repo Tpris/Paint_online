@@ -17,10 +17,18 @@ document.getElementById('erase').onclick = function(){
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 }
 
+function eraserBrushChange(backgroundColor, color, ctxOperation){
+    eraserBrush.style.backgroundColor = backgroundColor;
+    eraserBrush.style.color = color;
+    ctx.globalCompositeOperation= ctxOperation;
+}
+
 eraserBrush.onclick = function(){
     erase = !erase;
-    eraserBrush.style.backgroundColor = (erase)?"lightgray":"transparent"
-    eraserBrush.style.color = (erase)?"blue":"white"
+    if(erase)
+        eraserBrushChange("lightgray","blue","destination-out");
+    else 
+        eraserBrushChange("transparent","white","source-over");
 }
 
 color.onchange = function(){
@@ -41,7 +49,6 @@ canvas.onmouseup = function() {
 
 canvas.onmousemove = function(e) {
     if(mouseDown){
-        ctx.globalCompositeOperation= (erase)?"destination-out":"source-over";
         ctx.stroke();
         ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
     }
