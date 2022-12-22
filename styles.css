@@ -13,7 +13,7 @@ body {
 }
 
 #toolbar {
-    
+    /* display:block; */
     align-content: center;
     padding: 5px;
     width: 120px;
@@ -24,11 +24,11 @@ body {
 }
 
 #toolbar > * {
-    display : inline-block;
-    position: relative;
-	left: 50%;
-	transform: translateX(-50%);
+    text-align: center;
     margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #toolbar input {
@@ -38,7 +38,9 @@ body {
 } 
 
 button {
-    margin-top:15px;
+    transition:0.75s;
+    margin-top:20px;
+    margin-right: 25px;
     padding: 10px;
     background-color: transparent;
     color:white;
@@ -46,12 +48,14 @@ button {
               -5px -5px 10px #292338; */
     border: none;
     /* border-radius: 10px; */
-    border-radius: 14px;
+    border-radius: 25px;
     box-shadow: inset 3px 3px 5px #1f1b2a,
                 inset -3px -3px 5px #5a595c;
 }
 
 button:hover{
+    transition:0.75s;
+    transform:rotate(360deg);
     box-shadow: 3px 3px 7px #1f1b2a,
              -3px -3px 7px #5a595c;
 }
@@ -80,3 +84,4 @@ button:hover{
 input, button {
     cursor: pointer;
 }
+
