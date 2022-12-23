@@ -92,9 +92,10 @@ for (let i = 0; i < 50; i++) {
     starContainer.appendChild(star);
 }
 
-for (let i = 0; i < 50; i++) {
+
+function addIcon(className){
     const star = document.createElement('span')
-    star.className = "icofont-star-alt-1 icofont-2x";
+    star.className = className;
     star.style.top = Math.random() * 100 + "%";
     star.style.left = Math.random() * 100 + "%";
     star.style.fontSize = Math.random() * 50 + "px";
@@ -102,5 +103,14 @@ for (let i = 0; i < 50; i++) {
     star.style.animationDuration = Math.random() * 10;
     star.style.color = "rgb("+getRandomInt(0,255)+","+getRandomInt(0,255)+","+getRandomInt(0,255)+")";
     starContainer.appendChild(star);
+}
+
+for (let i = 0; i < 50; i++) {
+    addIcon("icofont-star-alt-1 icofont-2x");
+    addIcon("icofont-panda-face icofont-2x");
+    addIcon("icofont-panda icofont-3x");
+    addIcon("icofont-horse-head icofont-3x");
+    addIcon("icofont-octopus icofont-3x");
+    addIcon("icofont-octopus-alt icofont-3x");
 }
 
