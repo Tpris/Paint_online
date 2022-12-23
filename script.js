@@ -61,3 +61,24 @@ saveButton.onclick = function() {
   a.download = imageName;
   a.click();
 }
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+  }
+  
+
+  
+for (let i = 0; i < 100; i++) {
+    const star = document.createElement('span')
+    star.innerHTML = "ac_unit";
+    star.className = "material-symbols-outlined glitter-star";
+    star.style.top = Math.random() * 100 + "%";
+    star.style.left = Math.random() * 100 + "%";
+    star.style.fontSize = Math.random() * 50 + "px";
+    star.style.animationDelay = Math.random() + 's';
+    star.style.animationDuration = Math.random() * 10;
+    star.style.color = "rgb("+getRandomInt(0,255)+","+getRandomInt(0,255)+","+getRandomInt(0,255)+")";
+    document.getElementById('toolbar').appendChild(star)
+}

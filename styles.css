@@ -85,3 +85,24 @@ input, button {
     cursor: pointer;
 }
 
+span.glitter-star {
+    position: absolute;
+    color: black;
+    animation: 1s linear 0s infinite alternate star;
+  }
+  
+  @keyframes star {
+    0% {
+      -webkit-transform: scale(1.0);
+      opacity: 1;
+    }
+    50% {
+      -webkit-transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1.0);
+      opacity: 1;
+    }
+  }
+
