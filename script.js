@@ -77,7 +77,7 @@ for (let i = 0; i < 100; i++) {
     star.style.top = Math.random() * 100 + "%";
     star.style.left = Math.random() * 100 + "%";
     star.style.fontSize = Math.random() * 50 + "px";
-    star.style.animationDelay = Math.random() + 's';
+    star.style.animationDelay = Math.random() *1.5 + 's';
     star.style.animationDuration = Math.random() * 10;
     star.style.color = "rgb("+getRandomInt(0,255)+","+getRandomInt(0,255)+","+getRandomInt(0,255)+")";
     document.getElementById('toolbar').appendChild(star)

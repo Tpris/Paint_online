@@ -88,20 +88,20 @@ input, button {
 span.glitter-star {
     position: absolute;
     color: black;
-    animation: 1s linear 0s infinite alternate star;
+    animation: 1.5s linear 0s infinite star;
   }
   
   @keyframes star {
     0% {
-      -webkit-transform: scale(1.0);
+      -webkit-transform: scale(1.0) rotate(0deg);
       opacity: 1;
     }
     50% {
-      -webkit-transform: scale(0.5);
+      -webkit-transform: scale(0.5) rotate(180deg);
       opacity: 0;
     }
     100% {
-      -webkit-transform: scale(1.0);
+      -webkit-transform: scale(1.0) rotate(360deg);
       opacity: 1;
     }
   }
