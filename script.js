@@ -47,10 +47,17 @@ canvas.onmouseup = canvas.ontouchend = function() {
     mouseDown = false;  
 }
 
-canvas.onmousemove = canvas.ontouchmove = function(e) {
+canvas.onmousemove = function(e) {
     if(mouseDown){
         ctx.stroke();
         ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+    }
+}
+
+canvas.ontouchmove = function(e) {
+    if(mouseDown && e.touches.length==1){
+        ctx.stroke();
+        ctx.lineTo(e.touches[0].clientX - canvas.offsetLeft, e.touches[0].clientY - canvas.offsetTop);
     }
 }
 
