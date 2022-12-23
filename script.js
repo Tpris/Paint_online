@@ -39,15 +39,15 @@ lineWidth.onclick = function(){
     ctx.lineWidth = lineWidth.value;
 }
 
-canvas.onmousedown = function() { 
+canvas.onmousedown = canvas.ontouchstart = function() { 
     mouseDown = true;
     ctx.beginPath();
 }
-canvas.onmouseup = function() {
+canvas.onmouseup = canvas.ontouchend = function() {
     mouseDown = false;  
 }
 
-canvas.onmousemove = function(e) {
+canvas.onmousemove = canvas.ontouchmove = function(e) {
     if(mouseDown){
         ctx.stroke();
         ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
