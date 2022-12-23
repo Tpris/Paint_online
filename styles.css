@@ -9,6 +9,7 @@ body {
 }
 
 #drawing-board{
+    touch-action: none;
     cursor: crosshair;
 }
 
