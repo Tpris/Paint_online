@@ -85,7 +85,7 @@ input, button {
     cursor: pointer;
 }
 
-span.glitter-star {
+.glitter-star > *{
     position: absolute;
     color: black;
     animation: 1.5s linear 0s infinite star;

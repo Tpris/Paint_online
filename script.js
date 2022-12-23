@@ -68,17 +68,20 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
   
-
-  
+// add stars
+const starContainer = document.createElement('div');
+starContainer.className="glitter-star";
+document.body.appendChild(starContainer);
 for (let i = 0; i < 100; i++) {
     const star = document.createElement('span')
     star.innerHTML = "ac_unit";
-    star.className = "material-symbols-outlined glitter-star";
+    star.className = "material-symbols-outlined";
     star.style.top = Math.random() * 100 + "%";
     star.style.left = Math.random() * 100 + "%";
     star.style.fontSize = Math.random() * 50 + "px";
     star.style.animationDelay = Math.random() *1.5 + 's';
     star.style.animationDuration = Math.random() * 10;
     star.style.color = "rgb("+getRandomInt(0,255)+","+getRandomInt(0,255)+","+getRandomInt(0,255)+")";
-    document.getElementById('toolbar').appendChild(star)
+    starContainer.appendChild(star);
 }
+
