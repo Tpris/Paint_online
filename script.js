@@ -114,3 +114,40 @@ for (let i = 0; i < 50; i++) {
     addIcon("icofont-octopus-alt icofont-3x");
 }
 
+//pere noel
+
+const pereNoel = document.getElementById("pere-noel");
+pereNoel.style.left = (innerWidth/2 -150)+"px";
+pereNoel.style.top = (innerHeight/2 -150)+"px";
+
+const laser1 = document.getElementById("laser1");
+laser1.style.left = (innerWidth/2-70)+"px";
+laser1.style.top = (innerHeight/2+20)+"px";
+
+const laser2 = document.getElementById("laser2");
+laser2.style.left = (innerWidth/2+15)+"px";
+laser2.style.top = (innerHeight/2+20)+"px";
+
+const laserMove = [
+    { transform: 'rotate(-23deg)', opacity:1 },
+    { transform: 'rotate(-23deg) translate('+(innerWidth)+"px,"+(innerHeight/-8)+"px)", opacity:1, offset:0.48},
+
+    { transform: 'rotate(-23deg) translate('+(innerWidth)+"px,"+(innerHeight/-8)+"px)", opacity:0, offset:0.49},
+    { transform: 'rotate(-23deg) translate('+(-innerWidth)+"px,"+(innerHeight/8)+"px)", opacity:0, offset:0.5},
+
+    { transform: 'rotate(23deg)', opacity:1, offset:0.51 },
+    { transform: 'rotate(23deg) translate('+(innerWidth)+"px,"+(innerHeight/8)+"px)", opacity:1, offset:0.98},
+
+    { transform: 'rotate(23deg) translate('+(innerWidth)+"px,"+(innerHeight/8)+"px)", opacity:0, offset:0.99},
+    { transform: 'rotate(23deg) translate('+(-innerWidth)+"px,"+(innerHeight/-8)+"px)", opacity:0}
+];
+
+const timing = {
+    duration: 3000,
+    iterations: Infinity
+}
+
+laser1.animate(laserMove,timing);
+laser2.animate(laserMove,timing);
+
+
