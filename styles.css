@@ -4,7 +4,6 @@ body {
     color: white;
     height: 100%;
     display: flex;
-    animation: 5s linear 0s infinite canvasColor;
     /* color: transparent; */
     /* text-shadow: 0 0 20px rgba(43, 39, 39, 0.8), 0 0 0 rgb(184, 184, 184); */
 }
@@ -15,35 +14,12 @@ body {
     
 }
 
-@keyframes canvasColor {
-    0% {
-      background-color: red;
-    }
-    16% {
-        background-color: orange;
-    }
-    33% {
-      background-color: yellow;
-    }
-    50% {
-        background-color: green;
-    }
-    66% {
-        background-color: blue;
-    }
-    83% {
-        background-color: purple;
-    }
-    100% {
-        background-color: red;
-    } 
-  }
-
 #toolbar {
     /* display:block; */
     align-content: center;
     padding: 5px;
     width: 120px;
+    min-height: 100%;
     background: linear-gradient(25deg,
     red, orange, yellow , green, blue, purple);
     /* border-radius: 90px; */
@@ -112,56 +88,22 @@ input, button {
     cursor: pointer;
 }
 
-.glitter-star > *{
-    position: absolute;
-    color: black;
-    animation: 1.5s linear 0s infinite star;
-  }
-  
-@keyframes star {
-  0% {
-    -webkit-transform: scale(1.0) rotate(0deg);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: scale(0.5) rotate(180deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(1.0) rotate(360deg);
-    opacity: 1;
-  }
+canvas{
+  z-index: 10;
 }
 
-#pere-noel{
-    position: absolute;
-    font-size: 300px;
-    text-align: center;
-    animation: 1.5s linear 0s infinite noel;
+img{
+  position: absolute;
+  border-bottom-style: ridge;
+  border-right-style: ridge;
+  left:130px;
+  max-width: 90%;
+  max-height: 90%;
 }
 
-@keyframes noel {
-    0% {
-      transform: scale(1.0) rotate(0deg);
-    }
-    50% {
-      transform: scale(0.5) rotate(180deg);
-    }
-    100% {
-      transform: scale(1.0) rotate(360deg);
-    }
+#upload, #upload-canvas{
+  display: none;
 }
 
-#laser1, #laser2 {
-    width: 40px;
-    height: 10px;
-    position: absolute;  
-    border-radius: 5px;
-    background-color: red;
-    top:50%;
-    left:50%;
-    z-index:10;
-    transform: rotate(deg);
-}
 
 
