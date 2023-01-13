@@ -3,9 +3,8 @@ body {
     overflow: hidden;
     color: white;
     height: 100%;
-    display: flex;
-    /* color: transparent; */
-    /* text-shadow: 0 0 20px rgba(43, 39, 39, 0.8), 0 0 0 rgb(184, 184, 184); */
+    display: grid;
+    grid-template-columns: 130px 1fr;
 }
 
 #drawing-board{
@@ -15,14 +14,12 @@ body {
 }
 
 #toolbar {
-    /* display:block; */
     align-content: center;
     padding: 5px;
     width: 120px;
-    min-height: 100%;
+    min-height: 100vh;
     background: linear-gradient(25deg,
     red, orange, yellow , green, blue, purple);
-    /* border-radius: 90px; */
     box-shadow:  10px 0px 20px #8a8989;
 }
 
